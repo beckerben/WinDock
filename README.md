@@ -14,7 +14,7 @@ docker build --pull --rm -f "Dockerfile" -t windockerpoc:latest "."
 
 This will build the docker image with the simple console application.
 
-I normally would use portainer to create the image, but I was unable to get the creation to work for a windows container since it looked like the capabilities it adds to the command behind the scenes are not compatible with the windows container host.  I even tried disabling them.  I followed up in the portainer slack channel and the support team indicate that this may be a bug with windows server 2022 and they will investigate further.
+I normally would use portainer to create the container, but I was unable to get the creation to work for a windows container since it looked like the capabilities it adds to the command behind the scenes are not compatible with the windows container host.  I even tried disabling them.  I followed up in the portainer slack channel and the support team indicate that this may be a bug with windows server 2022 and they will investigate further.
 
 I did find once the container is created, the logs can be viewed and the container started, stopped, and console attached from portainer, I just can't use the re-create feature which comes in handy for making changes.  The command line has to be used to create the container, at least in my environment.
 
