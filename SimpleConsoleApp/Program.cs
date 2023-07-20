@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading;
-using System.Configuration;
 using System.Xml;
 
 namespace SimpleConsoleApp
@@ -16,12 +15,12 @@ namespace SimpleConsoleApp
             // If the environment variables are null or whitespace, set it to the default value
             if (string.IsNullOrWhiteSpace(piServer))
             {
-                piServer = "127.0.0.1";
+                piServer = "'Please specify ENV_PI_SERVER environment variable'";
             }
 
             if (string.IsNullOrWhiteSpace(xmlConfig))
             {
-                xmlConfig = @"<?xml version=""1.0"" encoding=""utf-8"" ?><configuration><startup><supportedRuntime version=""v4.0"" sku="".NETFramework,Version=v4.8""/></startup><appSettings><add key=""ENV_TARGET_SERVER"" value=""localhost""/></appSettings></configuration>";
+                xmlConfig = @"<?xml version=""1.0"" encoding=""utf-8"" ?><configuration><startup><supportedRuntime version=""v4.0"" sku="".NETFramework,Version=v4.8""/></startup><appSettings><add key=""ENV_TARGET_SERVER"" value=""'Please specify ENV_CONFIG_XML environment variable'""/></appSettings></configuration>";
                 
             }
 

@@ -21,8 +21,12 @@ I did find once the container is created, the logs can be viewed and the contain
 To create the container, the following command can be used:
 
 ``` sh
+docker container stop windocker
 docker container rm windocker
-docker run -d --name windocker --env-file env_file windockerpoc:1
+docker run -d --name windocker --env-file env_file windockerpoc:latest
 ```
 
-There are two commands here, one removes the container (ignore the error if it does not exist yet) and the second command starts a container called "windocker" that will run headless and will set two environment variables stored in the "env_file".
+There are three commands here:
+1. stops the container (ignore errors if not exists)
+1. removes the container (ignore errors if not exists)
+1. re-creates and starts a container named "windocker" that will run headless and will set two environment variables stored in the "env_file"
