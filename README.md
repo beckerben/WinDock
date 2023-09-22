@@ -27,6 +27,6 @@ docker run -d --name windocker --env-file env_file windockerpoc:latest
 ```
 
 There are three commands here:
-1. stops the container (ignore errors if not exists)
+1. stops the container (ignore errors if not exists).
 1. removes the container (ignore errors if not exists)
 1. re-creates and starts a container named "windocker" that will run headless and will set two environment variables stored in the "env_file"
